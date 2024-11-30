@@ -3,6 +3,7 @@ import 'package:responsive_dash_board_app/models/all_expensess_item_model.dart';
 import 'package:responsive_dash_board_app/utils/app_images.dart';
 import 'package:responsive_dash_board_app/widgets/all_expensess_header.dart';
 import 'package:responsive_dash_board_app/widgets/all_expensess_item.dart';
+import 'package:responsive_dash_board_app/widgets/all_expensess_item_list_view.dart';
 
 class AllExpensessWidget extends StatelessWidget {
   const AllExpensessWidget({super.key});
@@ -24,46 +25,7 @@ class AllExpensessWidget extends StatelessWidget {
             height: 16,
           ),
           Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 12.0),
-                    child: AllExpensessItem(
-                      itemModel: AllExpensessItemModel(
-                          image: Assets.imagesIncome,
-                          title: 'Income',
-                          date: 'April 2022',
-                          price: r"$20,129"),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 12.0),
-                    child: AllExpensessItem(
-                      itemModel: AllExpensessItemModel(
-                          image: Assets.imagesIncome,
-                          title: 'Income',
-                          date: 'April 2022',
-                          price: r"$20,129"),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 12.0),
-                    child: AllExpensessItem(
-                      itemModel: AllExpensessItemModel(
-                          image: Assets.imagesIncome,
-                          title: 'Income',
-                          date: 'April 2022',
-                          price: r"$20,129"),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            child: AllExpensessItemListView(),
           ),
         ],
       ),
