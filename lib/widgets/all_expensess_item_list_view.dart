@@ -24,14 +24,24 @@ class AllExpensessItemListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.only(right: 12),
-            child: AllExpensessItem(itemModel: items[index]),
+    return Row(
+      // children: items.map((e) => AllExpensessItem(itemModel: e)).toList(),// if i use this way i'll have issue in padding between items
+      children: items.asMap().entries.map(
+        (e) {
+          int index = e.key;
+          var item = e.value;
+          return Expanded(
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal:
+                      index == 1 ? 12 : 0), //here i  checked before set padding
+              child: AllExpensessItem(
+                itemModel: item,
+              ),
+            ),
           );
-        });
+        },
+      ).toList(),
+    );
   }
 }
