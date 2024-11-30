@@ -20,12 +20,50 @@ class AllExpensessWidget extends StatelessWidget {
       child: const Column(
         children: [
           AllExpensessHeader(),
-          AllExpensessItem(
-            itemModel: AllExpensessItemModel(
-                image: Assets.imagesIncome,
-                title: 'Income',
-                date: 'April 2022',
-                price: r"$20,129"),
+          SizedBox(
+            height: 16,
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.only(right: 12.0),
+                    child: AllExpensessItem(
+                      itemModel: AllExpensessItemModel(
+                          image: Assets.imagesIncome,
+                          title: 'Income',
+                          date: 'April 2022',
+                          price: r"$20,129"),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.only(right: 12.0),
+                    child: AllExpensessItem(
+                      itemModel: AllExpensessItemModel(
+                          image: Assets.imagesIncome,
+                          title: 'Income',
+                          date: 'April 2022',
+                          price: r"$20,129"),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.only(right: 12.0),
+                    child: AllExpensessItem(
+                      itemModel: AllExpensessItemModel(
+                          image: Assets.imagesIncome,
+                          title: 'Income',
+                          date: 'April 2022',
+                          price: r"$20,129"),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
