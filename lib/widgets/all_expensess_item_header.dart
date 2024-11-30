@@ -9,6 +9,7 @@ class AllExpensessItemHeader extends StatelessWidget {
     return Row(
       children: [
         Container(
+          padding: const EdgeInsets.all(14),
           width: 60,
           height: 60,
           decoration: const ShapeDecoration(
@@ -17,6 +18,7 @@ class AllExpensessItemHeader extends StatelessWidget {
           ),
           child: SvgPicture.asset(image),
         ),
+        const Spacer(), //it is like Expanded(child:sizedBox()),
         const Icon(
           Icons.arrow_forward_ios_rounded,
           color: Color(0xff064061),
