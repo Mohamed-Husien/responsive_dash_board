@@ -69,39 +69,43 @@ class ActiveAllExpensessItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: ShapeDecoration(
-        color: Colors.white,
+        color: const Color(0xFF4EB7F2),
         shape: RoundedRectangleBorder(
-          side: const BorderSide(
-            width: 1,
-            color: Color(0xffF1F1F1),
-          ),
           borderRadius: BorderRadius.circular(12),
         ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AllExpensessItemHeader(image: itemModel.image),
+          AllExpensessItemHeader(
+              imageBackground: Colors.white.withOpacity(0.10000000149011612),
+              imageColor: Colors.white,
+              image: itemModel.image),
           const SizedBox(
             height: 34,
           ),
           Text(
             itemModel.title,
-            style: AppStyle.styleSemiBold16,
+            style: AppStyle.styleSemiBold16.copyWith(
+              color: const Color(0xffFFFFFF),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
           Text(
             itemModel.date,
-            style: AppStyle.styleRegular14,
+            style: AppStyle.styleRegular14
+                .copyWith(color: const Color(0xFFFAFAFA)),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
             itemModel.price,
-            style: AppStyle.styleSemiBold24,
+            style: AppStyle.styleSemiBold24.copyWith(
+              color: const Color(0xFFFFFFFF),
+            ),
           ),
         ],
       ),

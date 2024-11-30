@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board_app/models/all_expensess_item_model.dart';
-import 'package:responsive_dash_board_app/utils/app_images.dart';
 import 'package:responsive_dash_board_app/widgets/all_expensess_header.dart';
-import 'package:responsive_dash_board_app/widgets/all_expensess_item.dart';
 import 'package:responsive_dash_board_app/widgets/all_expensess_item_list_view.dart';
 
 class AllExpensessWidget extends StatelessWidget {
@@ -24,9 +21,7 @@ class AllExpensessWidget extends StatelessWidget {
           SizedBox(
             height: 16,
           ),
-          Expanded(
-            child: AllExpensessItemListView(),
-          ),
+          AllExpensessItemListView(),
         ],
       ),
     );
