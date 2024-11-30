@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board_app/widgets/all_expensess_header.dart';
 
 class AllExpensessWidget extends StatelessWidget {
   const AllExpensessWidget({super.key});
@@ -14,7 +15,7 @@ class AllExpensessWidget extends StatelessWidget {
         ),
       ),
       child: const Column(
-        children: [],
+        children: [AllExpensessHeader()],
       ),
     );
   }
