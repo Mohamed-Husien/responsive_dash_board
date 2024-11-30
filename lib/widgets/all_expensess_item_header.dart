@@ -27,7 +27,7 @@ class AllExpensessItemHeader extends StatelessWidget {
         const Spacer(), //it is like Expanded(child:sizedBox()),
         Icon(
           Icons.arrow_forward_ios_rounded,
-          color: imageBackground ?? const Color(0xff064061),
+          color: imageColor ?? const Color(0xff064061),
         ),
       ],
     );
