@@ -7,13 +7,13 @@ class AllExpensessItemListView extends StatelessWidget {
   const AllExpensessItemListView({super.key});
   static const items = [
     AllExpensessItemModel(
-        image: Assets.imagesIncome,
-        title: 'Income',
+        image: Assets.imagesBalance,
+        title: 'Balance',
         date: 'April 2022',
         price: r"$20,129"),
     AllExpensessItemModel(
-        image: Assets.imagesBalance,
-        title: 'Balance',
+        image: Assets.imagesIncome,
+        title: 'Income',
         date: 'April 2022',
         price: r"$20,129"),
     AllExpensessItemModel(
@@ -36,6 +36,7 @@ class AllExpensessItemListView extends StatelessWidget {
                   horizontal:
                       index == 1 ? 12 : 0), //here i  checked before set padding
               child: AllExpensessItem(
+                isSelected: false,
                 itemModel: item,
               ),
             ),
