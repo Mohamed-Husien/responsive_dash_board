@@ -1,6 +1,6 @@
 class UserInfoMnodel {
   final String image, title, subTitle;
 
-  UserInfoMnodel(
+  const UserInfoMnodel(
       {required this.image, required this.title, required this.subTitle});
 }
