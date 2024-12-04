@@ -13,7 +13,10 @@ class MyCard extends StatelessWidget {
       child: Container(
         decoration: ShapeDecoration(
           image: const DecorationImage(
-            image: AssetImage(Assets.imagesCardBackground),
+            fit: BoxFit.fill,
+            image: AssetImage(
+              Assets.imagesCardBackground,
+            ),
           ),
           color: const Color(0xff4EB7F2),
           shape: RoundedRectangleBorder(
@@ -42,7 +45,6 @@ class MyCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(
                 right: 24,
-                bottom: 27,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -61,7 +63,10 @@ class MyCard extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+            const SizedBox(
+              height: 27,
+            ),
           ],
         ),
       ),
