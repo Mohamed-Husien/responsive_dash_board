@@ -22,7 +22,7 @@ class ItemeDetails extends StatelessWidget {
       ),
       trailing: Text(
         itemDetailsModel.value,
-        style: AppStyle.styleMedium16,
+        style: AppStyle.styleMedium16.copyWith(color: const Color(0xff208CC8)),
       ),
     );
   }
