@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board_app/widgets/all_expensess_header.dart';
+import 'package:responsive_dash_board_app/widgets/custom_section_header.dart';
 import 'package:responsive_dash_board_app/widgets/custom_background_container.dart';
 
 class IncomeSection extends StatelessWidget {
@@ -11,10 +11,10 @@ class IncomeSection extends StatelessWidget {
         child: Column(
       children: [
         Expanded(
-          child: CustomSectionsHeader(
+          child: CustomSectionHeader(
             text: "Income",
           ),
-        )
+        ),
       ],
     ));
   }
