@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board_app/utils/app_styles.dart';
 import 'package:responsive_dash_board_app/widgets/range_options.dart';
 
-class AllExpensessHeader extends StatelessWidget {
-  const AllExpensessHeader({super.key});
-
+class CustomSectionsHeader extends StatelessWidget {
+  const CustomSectionsHeader({super.key, required this.text});
+  final String text;
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'All Expenses',
+          text,
           style: AppStyle.styleSemiBold20,
         ),
-        Expanded(child: SizedBox()),
-        RangeOptions(),
+        const Expanded(child: SizedBox()),
+        const RangeOptions(),
       ],
     );
   }
