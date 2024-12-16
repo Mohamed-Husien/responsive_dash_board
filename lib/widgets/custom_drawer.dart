@@ -15,9 +15,9 @@ class CustomDrawer extends StatelessWidget {
     return Container(
       width: MediaQuery.sizeOf(context).width * .7,
       color: Colors.white,
-      child: const CustomScrollView(
+      child: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: UsrInfoListTile(
               userInfoMnodel: UserInfoMnodel(
                   image: Assets.imagesAvatar3,
@@ -25,34 +25,34 @@ class CustomDrawer extends StatelessWidget {
                   subTitle: "mohamed@gmail.com"),
             ),
           ),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: SizedBox(
               height: 8,
             ),
           ),
-          DrawerItemsListView(),
+          const DrawerItemsListView(),
           SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               children: [
-                Expanded(
+                const Expanded(
                     child: SizedBox(
                   height: 20,
                 )),
-                InActiveItem(
+                const InActiveItem(
                   drawerItemModel: DrawerItemModel(
                     title: "Setting system",
                     image: Assets.imagesSettings,
                   ),
                 ),
-                InActiveItem(
+                const InActiveItem(
                   drawerItemModel: DrawerItemModel(
                     title: "Logout account",
                     image: Assets.imagesLogout,
                   ),
                 ),
                 SizedBox(
-                  height: 40,
+                  height: MediaQuery.sizeOf(context).height * .02,
                 ),
               ],
             ),
