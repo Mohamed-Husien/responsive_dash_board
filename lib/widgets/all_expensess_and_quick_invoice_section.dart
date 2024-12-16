@@ -11,9 +11,6 @@ class AllExpensessAndQuickInvoiceSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
-            height: 40,
-          ),
           AllExpensessWidget(),
           SizedBox(
             height: 24,
