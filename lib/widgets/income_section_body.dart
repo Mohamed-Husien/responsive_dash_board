@@ -11,8 +11,9 @@ class IncomeSectionBody extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
 
-    return width >= 1200 && width >= 1755
-        ? const Row(
+    return width >= 1200 && width <= 1755
+        ? const SizedBox()
+        : const Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
@@ -22,7 +23,6 @@ class IncomeSectionBody extends StatelessWidget {
                 child: IncomeDetails(),
               ),
             ],
-          )
-        : const SizedBox();
+          );
   }
 }
