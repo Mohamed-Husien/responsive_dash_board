@@ -7,17 +7,15 @@ class AllExpensessAndQuickInvoiceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          AllExpensessWidget(),
-          SizedBox(
-            height: 24,
-          ),
-          QuickInvoice(),
-        ],
-      ),
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        AllExpensessWidget(),
+        SizedBox(
+          height: 24,
+        ),
+        QuickInvoice(),
+      ],
     );
   }
 }
