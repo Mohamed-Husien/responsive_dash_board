@@ -13,8 +13,6 @@ class IncomeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomBackgroundContaniner(
       child: Column(
-        mainAxisAlignment:
-            MainAxisAlignment.start, // Align children at the start
         children: [
           CustomSectionHeader(
             text: "Income",
