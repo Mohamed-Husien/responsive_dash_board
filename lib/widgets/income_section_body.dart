@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board_app/utils/size_config.dart';
 import 'package:responsive_dash_board_app/widgets/income_chart.dart';
 import 'package:responsive_dash_board_app/widgets/income_details.dart';
 
@@ -11,7 +12,7 @@ class IncomeSectionBody extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
 
-    return width >= 1200 && width <= 1755
+    return width >= SizeConfig.desktop && width <= 1755
         ? const SizedBox()
         : const Row(
             crossAxisAlignment: CrossAxisAlignment.center,
