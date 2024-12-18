@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board_app/utils/size_config.dart';
 
 abstract class AppStyle {
   static const TextStyle styleRegular16 = TextStyle(
@@ -61,4 +63,27 @@ abstract class AppStyle {
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
   );
+}
+
+double getResponsiveFontSize({required double fontSize}) {
+  double scaleFactor = getScaleFactor();
+  double responsiveFontSize = fontSize * scaleFactor;
+  double lowerLimit = fontSize * .8;
+  double upperLimit = fontSize * 1.2;
+  return responsiveFontSize.clamp(lowerLimit, upperLimit);
+}
+
+double getScaleFactor() {
+  var dispatcher = PlatformDispatcher.instance;
+  var physicalWidth = dispatcher.views.first.physicalSize.width;
+  var devicePixelRatio = dispatcher.views.first.devicePixelRatio;
+  double width = physicalWidth / devicePixelRatio;
+
+  if (width < SizeConfig.tablet) {
+    return width / 550;
+  } else if (width < SizeConfig.desktop) {
+    return width / 1000;
+  } else {
+    return width / 1900;
+  }
 }
