@@ -12,7 +12,7 @@ class CustomSectionHeader extends StatelessWidget {
       children: [
         Text(
           text,
-          style: AppStyle.styleSemiBold20,
+          style: AppStyle.styleSemiBold20(context),
         ),
         const Expanded(
           child: SizedBox(),
