@@ -15,7 +15,10 @@ class IncomeSectionBody extends StatelessWidget {
 
     return width >= SizeConfig.desktop && width <= 1755
         ? const Expanded(
-            child: DetailedIncomeChart(),
+            child: Padding(
+              padding: EdgeInsets.all(16.0),
+              child: DetailedIncomeChart(),
+            ),
           )
         : const Row(
             crossAxisAlignment: CrossAxisAlignment.center,

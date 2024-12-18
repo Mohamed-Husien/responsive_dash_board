@@ -19,11 +19,6 @@ class IncomeDetails extends StatelessWidget {
       children: items.map((e) => ItemeDetails(itemDetailsModel: e)).toList(),
     );
 
-    return ListView.builder(
-        shrinkWrap: true,
-        itemCount: items.length,
-        itemBuilder: (contxt, index) {
-          return ItemeDetails(itemDetailsModel: items[index]);
-        });
+   
   }
 }
