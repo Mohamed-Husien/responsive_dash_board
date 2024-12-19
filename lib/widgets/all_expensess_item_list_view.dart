@@ -33,6 +33,56 @@ class _AllExpensessItemListViewState extends State<AllExpensessItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                currentIndex = 0;
+              });
+            },
+            child: AllExpensessItem(
+              isSelected: currentIndex == 0,
+              itemModel: items[0],
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 14,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                currentIndex = 1;
+              });
+            },
+            child: AllExpensessItem(
+              isSelected: currentIndex == 1,
+              itemModel: items[1],
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 14,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                currentIndex = 2;
+              });
+            },
+            child: AllExpensessItem(
+              isSelected: currentIndex == 2,
+              itemModel: items[2],
+            ),
+          ),
+        ),
+      ],
+    );
+
+    return Row(
       // children: items.map((e) => AllExpensessItem(itemModel: e)).toList(),// if i use this way i'll have issue in padding between items
       children: items.asMap().entries.map(
         (e) {
