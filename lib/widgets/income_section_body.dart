@@ -27,6 +27,7 @@ class IncomeSectionBody extends StatelessWidget {
                 child: AspectRatio(aspectRatio: 1, child: IncomeChart()),
               ),
               Expanded(
+                flex: 2,
                 child: IncomeDetails(),
               ),
             ],
